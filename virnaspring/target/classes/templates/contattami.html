@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+     <link th:href="@{style.css}" rel="stylesheet" />
+</head>
+
+<body>
+<ul>
+  <li><a href="home">HOME</a></li>
+  <li><a href="chisono">CHI SONO</a></li>
+  <li><a href="contattami">CONTATTAMI</a></li> 
+</ul>
+
+<form action="#" th:action="@{/signup-submit}" th:objet="${SignUpForm}"
+method="POST">
+   <p> Nome <input type="text" name="Nome"/></p>
+   <p>Cognome <input type="text" name="Cognome"/></p>
+   <p>Email <input type="email" name="emailId"/></p>
+   <p>Messaggio <input type="text" name="Messaggio"/></p>
+   <p><input type="submit" value="Submit"/></p>
+
+</form>
+</body>
+</html>
